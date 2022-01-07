@@ -1,5 +1,5 @@
 local function setup()
-    vim.o.colorscheme = "gruvbox"
+    vim.api.nvim_command('colorscheme gruvbox')
 end
 
 return {
