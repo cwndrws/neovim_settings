@@ -2,7 +2,8 @@ local function setup()
     vim.api.nvim_command('colorscheme gruvbox')
     vim.o.number = true
     vim.o.relativenumber = true
-    vim.o.mapleader = "\<Space>"
+    vim.api.nvim_set_keymap('n', '<Space>', '', {})
+    vim.g.mapleader = ' '
     vim.o.incsearch = true
     vim.o.hlsearch = true
     vim.o.ignorecase = true
