@@ -58,7 +58,7 @@ vim.api.nvim_command('command! -bang -nargs=* Find call fzf#vim#grep(\'rg --colu
 nmap('<Leader>F', ':Find <CR>')
 
 -- <Leader>* -- ripgrep fzf search for word under cursor
-nmap('<Leader>*', ':Find <C-R>=expand('<cword>')<CR><CR>')
+nmap('<Leader>*', ':Find <C-R>=expand(\'<cword>\')<CR><CR>')
 
 -- Some Git Binds
 nmap('<Leader>gb', ':Git blame <CR>')
