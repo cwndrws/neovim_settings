@@ -12,4 +12,5 @@ vim.o.mouse = "a"
 vim.g.ale_fixers = {'remove_trailing_lines', 'trim_whitespace'}
 vim.g.ale_fix_on_save = 1
 vim.g.nvim_tree_quit_on_open = 1
-vim.g.deoplete.enable_at_startup = 1
+vim.g["deoplete#enable_at_startup"] = 1
+vim.fn["deoplete#custom#option"]('sources', { ['_'] = {'ale'}})
