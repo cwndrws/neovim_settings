@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+PLUGIN_NAME=${PLUGIN_NAME:-'settings'}
+REPO_OWNER=${REPO_OWNER:-'cwndrws'}
+REPO_NAME=${REPO_NAME:-'neovime_settings'}
+REPO_NWO=${REPO_NWO:-"${REPO_OWNER}/${REPO_NAME}"}
+REF=${REF:-'origin/main'}
+ARCHIVE_URL=${ARCHIVE_URL:-"https://github.com/${REPO_NWO}/archive/${REF}.tar.gz"}
+
+rev () {
+    git rev-parse $REF
+}
+
+sha () {
+    nix-prefetch-url --unpack "${ARCHIVE_URL}"
+}
+
+main () {
+    echo "\
+${PLUGIN_NAME} = pkgs.vimUtils.buildVimPlugin {
+  name = \"${REPO_NAME}\"
+  src = pkgs.fetchFromGitHub {
+    owner = \"${REPO_OWNER}\";
+    repo = \"${REPO_NAME}\";
+    rev = \"$(rev)\";
+    sha256 = \"$(sha)\";
+  };
+};"
+}
+
+if [[ "${BASH_SOURCE}" == "$0" ]]; then
+    main
+fi
