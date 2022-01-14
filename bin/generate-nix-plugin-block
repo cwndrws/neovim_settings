@@ -5,14 +5,13 @@ REPO_OWNER=${REPO_OWNER:-'cwndrws'}
 REPO_NAME=${REPO_NAME:-'neovime_settings'}
 REPO_NWO=${REPO_NWO:-"${REPO_OWNER}/${REPO_NAME}"}
 REF=${REF:-'origin/main'}
-ARCHIVE_URL=${ARCHIVE_URL:-"https://github.com/${REPO_NWO}/archive/${REF}.tar.gz"}
 
 rev () {
     git rev-parse $REF
 }
 
 sha () {
-    nix-prefetch-url --unpack "${ARCHIVE_URL}"
+    nix-prefetch-url --unpack "https://github.com/${REPO_NWO}/archive/$(rev).tar.gz"
 }
 
 main () {
