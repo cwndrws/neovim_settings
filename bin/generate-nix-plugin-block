@@ -2,7 +2,7 @@
 
 PLUGIN_NAME=${PLUGIN_NAME:-'settings'}
 REPO_OWNER=${REPO_OWNER:-'cwndrws'}
-REPO_NAME=${REPO_NAME:-'neovime_settings'}
+REPO_NAME=${REPO_NAME:-'neovim_settings'}
 REPO_NWO=${REPO_NWO:-"${REPO_OWNER}/${REPO_NAME}"}
 REF=${REF:-'origin/main'}
 
