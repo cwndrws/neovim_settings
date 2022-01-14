@@ -17,7 +17,7 @@ sha () {
 main () {
     echo "\
 ${PLUGIN_NAME} = pkgs.vimUtils.buildVimPlugin {
-  name = \"${REPO_NAME}\"
+  name = \"${REPO_NAME}\";
   src = pkgs.fetchFromGitHub {
     owner = \"${REPO_OWNER}\";
     repo = \"${REPO_NAME}\";
