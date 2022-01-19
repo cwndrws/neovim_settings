@@ -61,9 +61,8 @@ nmap('<Leader>F', ':Find <CR>')
 nmap('<Leader>*', ':Find <C-R>=expand(\'<cword>\')<CR><CR>')
 
 -- Some Git Binds
+nmap('<Leader>gg', ':Git <CR>')
 nmap('<Leader>gb', ':Git blame <CR>')
-nmap('<Leader>gs', ':Git status <CR>')
-nmap('<Leader>gc', ':Git commit <CR>')
 
 -- <Leader><Leader>T -- Run the nearest test to the cursor
 nmap('<Leader><Leader>T', ':TestNearest <CR>')
