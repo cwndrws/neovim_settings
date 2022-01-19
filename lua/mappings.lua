@@ -65,11 +65,11 @@ nmap('<Leader>gb', ':Git blame <CR>')
 nmap('<Leader>gs', ':Git status <CR>')
 nmap('<Leader>gc', ':Git commit <CR>')
 
--- <Leader>T -- Run the nearest test to the cursor
-nmap('<Leader>T', ':TestNearest <CR>')
+-- <Leader><Leader>T -- Run the nearest test to the cursor
+nmap('<Leader><Leader>T', ':TestNearest <CR>')
 
--- <Leader>t -- Run the last test we ran
-nmap('<Leader>t', ':TestLast <CR>')
+-- <Leader><Leader>t -- Run the last test we ran
+nmap('<Leader><Leader>t', ':TestLast <CR>')
 
 -- Avoid unintentional switches to Ex mode
 nmap ('Q', '<nop>')
