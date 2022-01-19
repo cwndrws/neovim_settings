@@ -73,3 +73,7 @@ nmap('<Leader><Leader>t', ':TestLast <CR>')
 
 -- Avoid unintentional switches to Ex mode
 nmap ('Q', '<nop>')
+
+-- Somehow, setting some of these mappings is wiping out existing mappings for
+-- vim-easymotion. This sets them back.
+map('', '<Leader><Leader>', '<Plug>(easymotion-prefix)', { noremap = true } )
