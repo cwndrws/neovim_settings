@@ -76,4 +76,4 @@ nmap ('Q', '<nop>')
 
 -- Somehow, setting some of these mappings is wiping out existing mappings for
 -- vim-easymotion. This sets them back.
-map('', '<Leader><Leader>', '<Plug>(easymotion-prefix)', { noremap = true } )
+vim.api.nvim_set_keymap('', '<Leader><Leader>', '<Plug>(easymotion-prefix)', {})
