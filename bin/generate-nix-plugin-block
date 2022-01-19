@@ -16,7 +16,8 @@ sha () {
 
 main () {
     echo "\
-${PLUGIN_NAME} = pkgs.vimUtils.buildVimPlugin {
+{ pkgs, ... }:
+pkgs.vimUtils.buildVimPlugin {
   name = \"${REPO_NAME}\";
   src = pkgs.fetchFromGitHub {
     owner = \"${REPO_OWNER}\";
@@ -24,7 +25,7 @@ ${PLUGIN_NAME} = pkgs.vimUtils.buildVimPlugin {
     rev = \"$(rev)\";
     sha256 = \"$(sha)\";
   };
-};"
+}"
 }
 
 if [[ "${BASH_SOURCE}" == "$0" ]]; then
