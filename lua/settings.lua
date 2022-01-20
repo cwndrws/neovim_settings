@@ -14,3 +14,14 @@ vim.g.ale_fix_on_save = 1
 vim.g.ale_completion_enabled = 1
 vim.g.nvim_tree_quit_on_open = 1
 vim.g["test#strategy"] = "vimux"
+
+function colorcolumns ()
+  colorcolumns = {}
+  for i=1, 250 do
+    table.insert(colorcolumns, tostring(i))
+  end
+
+  return "+" .. table.concat(colorcolumns, ",+")
+end
+
+vim.wo.colorcolumn = colorcolumns()
