@@ -73,10 +73,6 @@ nmap('<Leader><Leader>t', ':TestLast <CR>')
 -- Avoid unintentional switches to Ex mode
 nmap ('Q', '<nop>')
 
--- Set toggling of autopairs to <Leader><Leader>p mostly to get it off of <M-p>
--- which I hit a lot when quickly hitting <ESC> then 'p' to paste something
-vim.g["AutoPairsShortcutToggle"] = '<Leader><Leader>p'
-
 -- Somehow, setting some of these mappings is wiping out existing mappings for
 -- vim-easymotion. This sets them back.
 vim.api.nvim_set_keymap('', '<Leader><Leader>', '<Plug>(easymotion-prefix)', {})
