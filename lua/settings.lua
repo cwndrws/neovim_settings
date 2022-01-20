@@ -9,7 +9,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.mouse = "a"
-vim.g.ale_fixers = {'remove_trailing_lines', 'trim_whitespace'}
+vim.g.ale_fixers = {['*'] = {'remove_trailing_lines', 'trim_whitespace'}}
 vim.g.ale_fix_on_save = 1
 vim.g.ale_completion_enabled = 1
 vim.g.nvim_tree_quit_on_open = 1
