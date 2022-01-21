@@ -9,6 +9,7 @@ end
 
 local function on_focus ()
   vim.wo.winhighlight = ''
+  vim.cmd('ownsyntax on')
 end
 
 local function on_blur ()
@@ -23,6 +24,7 @@ local function on_blur ()
   }, ',')
 
   vim.wo.winhighlight = winhighlight_blurred
+  vim.cmd('ownsyntax off')
 end
 
 local function setup()
