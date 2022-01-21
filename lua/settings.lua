@@ -14,7 +14,7 @@ local function setup ()
   vim.g.ale_completion_enabled = 1
   vim.g.nvim_tree_quit_on_open = 1
   vim.g["test#strategy"] = "vimux"
-  vim.g.textwidth = 80
+  vim.api.nvim_command('set textwidth=80')
 end
 
 return {
