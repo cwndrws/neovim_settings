@@ -8,25 +8,29 @@ local function colorcolumns ()
 end
 
 local function on_focus ()
-  vim.wo.winhighlight = ''
-  vim.cmd('ownsyntax on')
-  vim.wo.relativenumber = true
+  if vim.bo.filetype ~= '' then
+    vim.wo.winhighlight = ''
+    vim.cmd('ownsyntax on')
+    vim.wo.relativenumber = true
+  end
 end
 
 local function on_blur ()
-  local winhighlight_blurred = table.concat({
-    'CursorLineNr:LineNr',
-    'EndOfBuffer:ColorColumn',
-    'IncSearch:ColorColumn',
-    'Normal:ColorColumn',
-    'NormalNC:ColorColumn',
-    'Search:ColorColumn',
-    'SignColumn:ColorColumn'
-  }, ',')
+  if vim.bo.filetype ~= '' then
+    local winhighlight_blurred = table.concat({
+      'CursorLineNr:LineNr',
+      'EndOfBuffer:ColorColumn',
+      'IncSearch:ColorColumn',
+      'Normal:ColorColumn',
+      'NormalNC:ColorColumn',
+      'Search:ColorColumn',
+      'SignColumn:ColorColumn'
+    }, ',')
 
-  vim.wo.winhighlight = winhighlight_blurred
-  vim.cmd('ownsyntax off')
-  vim.wo.relativenumber = false
+    vim.wo.winhighlight = winhighlight_blurred
+    vim.cmd('ownsyntax off')
+    vim.wo.relativenumber = false
+  end
 end
 
 local function setup()
