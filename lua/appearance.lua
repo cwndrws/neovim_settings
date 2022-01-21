@@ -33,6 +33,7 @@ local function setup()
   vim.wo.colorcolumn = colorcolumns()
   vim.highlight.link('LineNr', 'ColorColumn', {force = true})
   vim.highlight.link('CursorLine', 'ColorColumn', {force = true})
+  vim.highlight.link('EndOfBuffer', 'ColorColumn', {force = true})
   autocmd = require('autocmd')
   autocmd.augroup {
     group = 'on_focus_commands',
