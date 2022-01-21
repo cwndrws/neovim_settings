@@ -1,4 +1,4 @@
-function ls(dir_path)
+local function ls(dir_path)
     local dir = vim.loop.fs_scandir(dir_path)
     if not dir then
         print(string.format("Error loading directory '%s'", dir_path))
@@ -19,12 +19,12 @@ function ls(dir_path)
     return files
 end
 
-function cwd ()
+local function cwd ()
     return debug.getinfo(1).source:sub(2):match("(.*/)")
 end
 
 -- This is extremely unsafe, don't copy this for general purpose!
-function load_dir(dir, except) 
+local function load_dir(dir, except)
     local except_set = {}
     for _, e in ipairs(except) do except_set[e] = true end
     local files = ls(dir)
@@ -41,7 +41,7 @@ function load_dir(dir, except)
     return loaded_files
 end
 
-function setup()
+local function setup()
     local autocmd = require('autocmd')
     local ft_dir = string.format("%s%s", cwd(), "filetypes")
     local filetypes = load_dir(ft_dir, {"filetype.lua"})
@@ -58,4 +58,7 @@ function setup()
     }
 end
 
+return {
+  setup = setup
+}
 setup()
