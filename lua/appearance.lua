@@ -10,8 +10,8 @@ end
 local function setup()
   vim.api.nvim_command('colorscheme gruvbox')
   vim.wo.colorcolumn = colorcolumns()
-  vim.highlight.link('LineNr', 'ColorColumn')
-  vim.highlight.link('CursorLine', 'ColorColumn')
+  vim.highlight.link('LineNr', 'ColorColumn', {force = true})
+  vim.highlight.link('CursorLine', 'ColorColumn', {force = true})
 end
 
 return {
