@@ -18,13 +18,14 @@ end
 local function on_blur ()
   if vim.bo.filetype ~= '' then
     local winhighlight_blurred = table.concat({
-      'CursorLineNr:LineNr',
-      'EndOfBuffer:ColorColumn',
-      'IncSearch:ColorColumn',
-      'Normal:ColorColumn',
-      'NormalNC:ColorColumn',
-      'Search:ColorColumn',
-      'SignColumn:ColorColumn'
+      'LineNr:StatusLineNC',
+      'CursorLineNr:StatusLineNC',
+      'EndOfBuffer:StatusLineNC',
+      'IncSearch:StatusLineNC',
+      'Normal:StatusLineNC',
+      'NormalNC:StatusLineNC',
+      'Search:StatusLineNC',
+      'SignColumn:StatusLineNC'
     }, ',')
 
     vim.wo.winhighlight = winhighlight_blurred
