@@ -62,14 +62,15 @@ local function setup ()
   nmap('<Leader>*', ':Find <C-R>=expand(\'<cword>\')<CR><CR>')
 
   -- Some Git Binds
-  nmap('<Leader>gg', ':Git <CR>')
+  nmap('<Leader>gs', ':Git <CR>')
   nmap('<Leader>gb', ':Git blame <CR>')
+  nmap('<Leader>gl', ':Git log <CR>')
 
-  -- <Leader><Leader>T -- Run the nearest test to the cursor
-  nmap('<Leader><Leader>T', ':TestNearest <CR>')
+  -- <Leader>T -- Run the nearest test to the cursor
+  nmap('<Leader>T', ':TestNearest <CR>')
 
-  -- <Leader><Leader>t -- Run the last test we ran
-  nmap('<Leader><Leader>t', ':TestLast <CR>')
+  -- <Leader>t -- Run the last test we ran
+  nmap('<Leader>t', ':TestLast <CR>')
 
   -- Avoid unintentional switches to Ex mode
   nmap ('Q', '<nop>')
