@@ -6,7 +6,6 @@ local ruby = FileType:new{
     function ()
       vim.bo.tabstop=2
       vim.bo.shiftwidth=2
-      require'lspconfig'.solargraph.setup{}
     end,
   }
 }
