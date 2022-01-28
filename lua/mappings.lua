@@ -73,16 +73,16 @@ local function setup ()
   nmap('<Leader>t', ':TestLast <CR>')
 
   -- <Leader><Leader>d -- preview definition
-  nmap('<silent> <Leader><Leader>d', ':Lspsaga preview_definition<CR>')
+  nmap('<Leader><Leader>d', ':Lspsaga preview_definition<CR>')
 
   -- <Leader><Leader>h -- hover card
-  nmap('<silent> <Leader><Leader>h', ':Lspsaga hover_doc<CR>')
+  nmap('<Leader><Leader>h', ':Lspsaga hover_doc<CR>')
 
   -- <Leader><Leader>e -- next error
-  nmap('<slient> <Leader><Leader>e', ':Lspsaga diagnostic_jump_next<CR>')
+  nmap('<Leader><Leader>e', ':Lspsaga diagnostic_jump_next<CR>')
 
   -- <Leader><Leader>E -- previous error
-  nmap('<silent> <Leader><Leader>E', ':Lspsaga diagnostic_jump_prev<CR>')
+  nmap('<Leader><Leader>E', ':Lspsaga diagnostic_jump_prev<CR>')
 
   -- Avoid unintentional switches to Ex mode
   nmap ('Q', '<nop>')
