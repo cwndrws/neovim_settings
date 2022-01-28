@@ -84,12 +84,11 @@ local function setup ()
   -- <Leader><Leader>E -- previous error
   nmap('<silent> <Leader><Leader>E', ':Lspsaga diagnostic_jump_prev<CR>')
 
+  -- <Leader><Leader>s -- easymotion
+  nmap('<Leader><Leader>s', '<Plug>(easymotion-s)')
+
   -- Avoid unintentional switches to Ex mode
   nmap ('Q', '<nop>')
-
-  -- Somehow, setting some of these mappings is wiping out existing mappings for
-  -- vim-easymotion. This sets them back.
-  vim.api.nvim_set_keymap('', '<Leader><Leader>', '<Plug>(easymotion-prefix)', {})
 end
 
 return {
