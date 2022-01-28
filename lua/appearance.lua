@@ -7,8 +7,17 @@ local function colorcolumns ()
   return "+" .. table.concat(colorcolumns, ",+")
 end
 
+local function disallow_blur_filetypes ()
+  return {
+    ['sagahover'] = true,
+    ['diff'] = true,
+    ['fugitiveblame']= true,
+  }
+end
+
 local function on_focus ()
-  if vim.bo.filetype ~= '' then
+  local ft = vim.bo.filetype
+  if ft ~= '' and disallow_blur_filetypes()[ft] ~= true then
     vim.wo.winhighlight = ''
     vim.cmd('ownsyntax on')
     vim.wo.relativenumber = true
@@ -16,7 +25,8 @@ local function on_focus ()
 end
 
 local function on_blur ()
-  if vim.bo.filetype ~= '' then
+  local ft = vim.bo.filetype
+  if ft ~= '' and disallow_blur_filetypes()[ft] ~= true then
     local winhighlight_blurred = table.concat({
       'LineNr:StatusLineNC',
       'CursorLineNr:StatusLineNC',
