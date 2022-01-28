@@ -2,13 +2,7 @@ local function setup_servers ()
   local lspconfig = require('lspconfig')
   lspconfig.rls.setup{}
   lspconfig.rnix.setup{}
-  lspconfig.solargraph.setup({
-    settings = {
-      solargraph = {
-        transport = "external",
-      }
-    },
-  })
+  lspconfig.solargraph.setup{}
   lspconfig.sumneko_lua.setup(require("lua-dev").setup())
 end
 
