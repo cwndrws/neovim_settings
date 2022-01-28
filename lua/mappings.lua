@@ -84,9 +84,6 @@ local function setup ()
   -- <Leader><Leader>E -- previous error
   nmap('<silent> <Leader><Leader>E', ':Lspsaga diagnostic_jump_prev<CR>')
 
-  -- <Leader><Leader>s -- easymotion
-  nmap('<Leader><Leader>s', '<Plug>(easymotion-s)')
-
   -- Avoid unintentional switches to Ex mode
   nmap ('Q', '<nop>')
 end
