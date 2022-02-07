@@ -1,10 +1,10 @@
 local function colorcolumns ()
-  local colorcolumns = {}
+  local columns = {}
   for i=1, 250 do
-    table.insert(colorcolumns, tostring(i))
+    table.insert(columns, tostring(i))
   end
 
-  return "+" .. table.concat(colorcolumns, ",+")
+  return "+" .. table.concat(columns, ",+")
 end
 
 local function disallow_blur_filetypes ()
@@ -35,7 +35,9 @@ local function on_blur ()
       'Normal:StatusLineNC',
       'NormalNC:StatusLineNC',
       'Search:StatusLineNC',
-      'SignColumn:StatusLineNC'
+      'SignColumn:StatusLineNC',
+      'ColorColumn:StatusLineNC',
+      'CursorLine:StatusLineNC',
     }, ',')
 
     vim.wo.winhighlight = winhighlight_blurred
@@ -51,7 +53,7 @@ local function setup()
   vim.highlight.link('LineNr', 'ColorColumn', {force = true})
   vim.highlight.link('CursorLine', 'ColorColumn', {force = true})
   vim.highlight.link('EndOfBuffer', 'ColorColumn', {force = true})
-  autocmd = require('autocmd')
+  local autocmd = require('autocmd')
   autocmd.augroup {
     group = 'on_focus_commands',
     autocmds = {
