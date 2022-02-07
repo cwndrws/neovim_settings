@@ -3,7 +3,6 @@ local function colorcolumns ()
   for i=1, 250 do
     table.insert(columns, tostring(i))
   end
-
   return "+" .. table.concat(columns, ",+")
 end
 
