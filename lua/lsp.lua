@@ -4,6 +4,7 @@ local function setup_servers ()
   lspconfig.rnix.setup{}
   lspconfig.solargraph.setup{}
   lspconfig.sumneko_lua.setup(require("lua-dev").setup())
+  lspconfig.gopls.setup{}
 end
 
 local function setup_lspsaga ()
