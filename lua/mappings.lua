@@ -84,6 +84,9 @@ local function setup ()
   -- <Leader><Leader>E -- previous error
   nmap('<Leader><Leader>E', ':Lspsaga diagnostic_jump_prev<CR>')
 
+  -- <Leader><Leader>f -- open lsp finder on current word/symbol
+  nmap('<Leader><Leader>f', ':Lspsaga lsp_finder<CR>')
+
   -- Avoid unintentional switches to Ex mode
   nmap ('Q', '<nop>')
 end
