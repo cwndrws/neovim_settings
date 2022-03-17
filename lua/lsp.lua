@@ -5,6 +5,7 @@ local function setup_servers ()
   lspconfig.solargraph.setup{cmd={"./bin/solargraph"}}
   lspconfig.sumneko_lua.setup(require("lua-dev").setup())
   lspconfig.gopls.setup{}
+  lspconfig.tsserver.setup{}
 end
 
 local function setup_lspsaga ()
