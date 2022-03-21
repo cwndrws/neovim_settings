@@ -64,7 +64,7 @@ local function setup ()
   -- Some Git Binds
   nmap('<Leader>gs', ':Git <CR>')
   nmap('<Leader>gb', ':Git blame <CR>')
-  nmap('<Leader>gl', ':Git log <CR>')
+  nmap('<Leader>gl', ':Git log --pretty=oneline --graph<CR>')
 
   -- <Leader>T -- Run the nearest test to the cursor
   nmap('<Leader>T', ':TestNearest <CR>')
