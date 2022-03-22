@@ -78,6 +78,9 @@ local function setup ()
   -- <Leader><Leader>f -- open lsp finder on current word/symbol
   nmap('<Leader><Leader>f', ':Lspsaga lsp_finder<CR>')
 
+  -- <Leader>y -- osc yank copy to system clipboard
+  nmap('<Leader>y', ':OSCYank<CR>')
+
   -- Avoid unintentional switches to Ex mode
   nmap ('Q', '<nop>')
 end
