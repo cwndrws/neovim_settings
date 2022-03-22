@@ -42,8 +42,8 @@ local function setup ()
   -- <Leader>b -- fuzzy finder for open buffers
   nmap('<Leader>b', ':Buffers <CR>')
 
-  vim.api.nvim_command('command! -bang -nargs=* Rg' +
-      ' call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,' +
+  vim.api.nvim_command('command! -bang -nargs=* Rg' ..
+      ' call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,' ..
       ' fzf#vim#with_preview({\'options\': \'--delimiter : --nth 4..\'}), <bang>0)')
 
   -- <Leader>F -- ripgrep live fuzzy search with fzf
