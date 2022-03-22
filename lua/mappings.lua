@@ -47,7 +47,7 @@ local function setup ()
       ' fzf#vim#with_preview({\'options\': \'--delimiter : --nth 4..\'}), <bang>0)')
 
   -- <Leader>F -- ripgrep live fuzzy search with fzf
-  nmap('<Leader>F', ':Find <CR>')
+  nmap('<Leader>F', ':Rg <CR>')
 
   -- <Leader>* -- ripgrep fzf search for word under cursor
   nmap('<Leader>*', ':Find <C-R>=expand(\'<cword>\')<CR><CR>')
