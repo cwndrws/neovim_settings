@@ -16,6 +16,7 @@ local function setup ()
   vim.g["test#strategy"] = "vimux"
   vim.api.nvim_command('set textwidth=80')
   vim.g["EasyMotion_do_mapping"] = false
+  vim.g["airline#extensions#tabline#enabled"] = 1
 end
 
 return {
