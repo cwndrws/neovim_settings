@@ -3,6 +3,8 @@ if exists('g:loaded_cwndrws_settings') | finish | endif " prevent loading file t
 let s:save_cpo = &cpo " save user coptions
 set cpo&vim " reset them to defaults
 
+" load things that are easier to define in vimscript
+runtime 'settings.vim'
 " command to run our plugin
 lua require 'cwndrws_settings'.setup()
 
