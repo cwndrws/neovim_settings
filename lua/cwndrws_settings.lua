@@ -5,7 +5,6 @@ local function setup()
     require('appearance').setup()
     require('mappings').setup()
     require('filetypes').setup()
-    require('nvim-tree').setup()
     require('clipboard').setup()
 end
 
