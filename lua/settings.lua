@@ -12,7 +12,6 @@ local function setup ()
   vim.g.ale_fixers = {['*'] = {'remove_trailing_lines', 'trim_whitespace'}}
   vim.g.ale_fix_on_save = 1
   vim.g.ale_completion_enabled = 1
-  vim.g.nvim_tree_quit_on_open = 1
   vim.g["test#strategy"] = "vimux"
   vim.api.nvim_command('set textwidth=80')
   vim.g["EasyMotion_do_mapping"] = false
