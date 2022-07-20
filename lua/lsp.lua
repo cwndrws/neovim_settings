@@ -10,6 +10,7 @@ local function setup_servers ()
   local pid = vim.fn.getpid()
   lspconfig.omnisharp.setup{
     cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) };
+    root_dir = lspconfig.util.root_pattern(".csproj");
   }
 end
 
