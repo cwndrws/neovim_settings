@@ -6,6 +6,11 @@ local function setup_servers ()
   lspconfig.sumneko_lua.setup(require("lua-dev").setup())
   lspconfig.gopls.setup{}
   lspconfig.tsserver.setup{}
+  local omnisharp_bin = vim.env.HOME .. "/OmniSharp"
+  local pid = vim.fn.getpid()
+  lspconfig.omnisharp.setup{
+    cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) };
+  }
 end
 
 local function setup_lspsaga ()
