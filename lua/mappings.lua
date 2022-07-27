@@ -52,6 +52,18 @@ local function setup ()
   -- <Leader>* -- search with ripgrep word under cursor
   nmap('<Leader>*', ':Ack <C-R>=expand(\'<cword>\')<CR><CR>')
 
+  -- Map arrow keys to quickfix navigation
+  nmap('<Up>', ':cprevious<CR>')
+  nmap('<Down>', ':cnext<CR>')
+  nmap('<Left>', ':cpfile<CR>')
+  nmap('<Right>', ':cnfile<CR>')
+
+  -- Map shift + arrow keys to location list navigation
+  nmap('<S-Up>', ':lprevious<CR>')
+  nmap('<S-Down>', ':lnext<CR>')
+  nmap('<S-Left>', ':lpfile<CR>')
+  nmap('<S-Right>', ':lnfile<CR>')
+
   -- Some Git Binds
   nmap('<Leader>gs', ':Git <CR>')
   nmap('<Leader>gb', ':Git blame <CR>')
