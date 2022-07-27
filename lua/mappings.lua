@@ -46,10 +46,10 @@ local function setup ()
       ' call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,' ..
       ' fzf#vim#with_preview({\'options\': \'--delimiter : --nth 4..\'}), <bang>0)')
 
-  -- <Leader>F -- ripgrep live fuzzy search with fzf
-  nmap('<Leader>F', ':Ack <CR>')
+  -- <Leader>F -- search with ripgrep
+  nmap('<Leader>F', ':Ack <C-R><CR>')
 
-  -- <Leader>* -- ripgrep fzf search for word under cursor
+  -- <Leader>* -- search with ripgrep word under cursor
   nmap('<Leader>*', ':Ack <C-R>=expand(\'<cword>\')<CR><CR>')
 
   -- Some Git Binds
