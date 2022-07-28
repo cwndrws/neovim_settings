@@ -16,6 +16,8 @@ local function setup ()
   vim.api.nvim_command('set textwidth=80')
   vim.g["EasyMotion_do_mapping"] = false
   vim.g["airline#extensions#tabline#enabled"] = 1
+  vim.g.oscyank_term = 'default'
+  vim.g.oscyank_silent = true
 end
 
 return {
