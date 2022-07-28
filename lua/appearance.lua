@@ -46,7 +46,7 @@ local function on_blur ()
 end
 
 local function setup()
-  vim.api.nvim_command('colorscheme gruvbox')
+  -- vim.api.nvim_command('colorscheme gruvbox')
   vim.api.nvim_command('set cursorline')
   vim.wo.colorcolumn = colorcolumns()
   vim.highlight.link('LineNr', 'ColorColumn', {force = true})
