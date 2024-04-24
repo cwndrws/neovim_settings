@@ -49,9 +49,9 @@ local function setup()
   vim.api.nvim_command('colorscheme gruvbox')
   vim.api.nvim_command('set cursorline')
   vim.wo.colorcolumn = colorcolumns()
-  vim.highlight.link('LineNr', 'ColorColumn', {force = true})
-  vim.highlight.link('CursorLine', 'ColorColumn', {force = true})
-  vim.highlight.link('EndOfBuffer', 'ColorColumn', {force = true})
+  vim.api.nvim_set_hl(0, 'LineNr', { link = 'ColorColumn' })
+  vim.api.nvim_set_hl(0, 'CursorLine', { link = 'ColorColumn' })
+  vim.api.nvim_set_hl(0, 'EndOfBuffer', { link = 'ColorColumn' })
   local autocmd = require('autocmd')
   autocmd.augroup {
     group = 'on_focus_commands',
