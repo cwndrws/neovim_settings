@@ -3,7 +3,7 @@ local function setup_servers ()
   lspconfig.rust_analyzer.setup{}
   lspconfig.rnix.setup{}
   lspconfig.solargraph.setup{cmd={"./bin/solargraph"}}
-  lspconfig.lua_ls.setup(require("lua-dev").setup())
+  lspconfig.lua_ls.setup(require("neodev").setup())
   lspconfig.gopls.setup{}
   lspconfig.tsserver.setup{}
   local omnisharp_bin = vim.env.HOME .. "/OmniSharp"
