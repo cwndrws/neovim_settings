@@ -5,7 +5,7 @@ local function setup_servers ()
   lspconfig.solargraph.setup{cmd={"./bin/solargraph"}}
   lspconfig.lua_ls.setup(require("neodev").setup())
   lspconfig.gopls.setup{}
-  lspconfig.tsserver.setup{}
+  lspconfig.ts_ls.setup{}
   local omnisharp_bin = vim.env.HOME .. "/OmniSharp"
   local pid = vim.fn.getpid()
   lspconfig.omnisharp.setup{
